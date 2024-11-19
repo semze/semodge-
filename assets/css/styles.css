@@ -197,7 +197,7 @@ body, html {
 /* Logo Section */
 .logo-container {
     position: absolute;
-    top: 240px;
+    top: 150px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5; /* Make sure the logo is above the particles and other content */
@@ -206,7 +206,7 @@ body, html {
 
 .logo {
     width: 150px; /* You can adjust the size of the logo */
-    height: 150px; /* Make sure the height matches the width for a perfect circle */
+    height: px; /* Make sure the height matches the width for a perfect circle */
     border-radius: 50%; /* Makes the logo circular */
     background-color: transparent; /* Keep the background transparent */
     box-shadow: 0 0 15px rgba(98, 0, 234, 0.8); /* Add glowing effect */
