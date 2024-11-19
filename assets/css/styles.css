@@ -1,49 +1,51 @@
-body {
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.856);
+    overflow-y: auto; /* Enable scrolling */
+    color: rgb(0, 0, 0);
+    height: 100%;
+    position: relative;
 }
 
+/* Particle Background */
+#particle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;  /* Ensures particles stay behind content */
+}
+
+/* Main Container */
 .container {
-    text-align: center;
+    position: relative;
+    z-index: 10;  /* Ensures the content is on top of particles */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 90%;
-    min-width: 300px;
+    text-align: center;
 }
 
-h1 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
+/* Service Boxes */
 .service-boxes {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .service-box {
-    background-color: #f0f0f0;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.301); /* Black with slight transparency */
+    color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(98, 0, 234, 0.5);
     text-align: center;
     width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .service-img {
@@ -51,35 +53,167 @@ h1 {
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(98, 0, 234, 0.5);
 }
 
-.service-box h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.service-box p {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
+/* Buttons */
 button {
-    background-color: black;
+    background-color: rgba(98, 0, 234, 0.8);
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: auto;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: rgba(98, 0, 234, 1);
+    transform: scale(1.05);
 }
 
+/* Back Button */
 .back-btn {
     margin-top: 30px;
     font-size: 16px;
+    background-color: rgba(98, 0, 234, 0.8);
+    padding: 10px 20px;
+}
+
+/* Disclaimer */
+.disclaimer {
+    font-size: 45px;
+    margin-top: 204px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/*index*/
+
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    overflow-y: auto;
+    color: white;
+}
+
+/* Animated Background */
+.animated-background {
+    background-color: black;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Add fade-in effect */
+}
+
+/* Particle Background */
+#particle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;  /* Ensures particles stay behind content */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        background-color: black;
+    }
+    100% {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+/* Discord Button */
+.discord-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #7289da; /* Discord Blue */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 10; /* Make sure it's above other content */
+}
+
+.discord-btn:hover {
+    background-color: #5e73b7;
+    transform: scale(1.05);
+}
+
+/* Welcome Container */
+.welcome-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.welcome-container h1 {
+    font-size: 48px;
+    color: #6200ea;
+    text-shadow: 0 0 15px rgba(98, 0, 234, 0.8);
+}
+
+.welcome-container p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.welcome-container button {
+    background-color: rgba(98, 0, 234, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.welcome-container button:hover {
+    background-color: rgba(98, 0, 234, 1);
+    transform: scale(1.05);
+}
+
+/* Logo Section */
+.logo-container {
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* Make sure the logo is above the particles and other content */
+    text-align: center;
+}
+
+.logo {
+    width: 150px; /* You can adjust the size of the logo */
+    height: 150px; /* Make sure the height matches the width for a perfect circle */
+    border-radius: 50%; /* Makes the logo circular */
+    background-color: transparent; /* Keep the background transparent */
+    box-shadow: 0 0 15px rgba(98, 0, 234, 0.8); /* Add glowing effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 0 25px rgba(98, 0, 234, 1); /* Stronger glow when hovered */
 }

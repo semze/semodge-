@@ -3,14 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Store</title>
+    <title>Welcome to Our Store!</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to my store!</h1>
-        <p>If you wanna spend your hard-earned moneys on something kinda cool, you found the place!</p>
-        <button onclick="window.location.href='selections.html'">View Selections</button>
+    <div id="particle-background"></div>
+    <div class="animated-background">
+        <div class="logo-container">
+            <img src="assets/img/logo.png" alt="Logo" class="logo">
+        </div>
+        <a href="https://discord.gg/ExgmZNT5cC" target="_blank" class="discord-btn">Join Our Discord</a>
+
+        <div class="welcome-container">
+            <h1>Welcome to semodge's services:></h1>
+            <p>Let us handle the tasks you don’t want to do!</p>
+            <button onclick="window.location.href='selections.html'">Start Exploring</button>
+        </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS("particle-background", {
+                particles: {
+                    number: { value: 100 },
+                    color: { value: "#6200ea" },
+                    shape: { type: "circle" },
+                    size: { value: 3 },
+                    move: { enable: true, speed: 1 },
+                    line_linked: { enable: true, color: "#6200ea", distance: 150, width: 1 }
+                },
+                interactivity: {
+                    events: {
+                        onhover: { enable: true, mode: "grab" }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

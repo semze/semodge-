@@ -5,34 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selections</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <div id="particle-background"></div>
     <div class="container">
-        <h1>Our Services</h1>
+        <h1></h1>
         <div class="service-boxes">
             <div class="service-box">
                 <img src="assets/img/account.jpg" alt="Fortnite Accounts" class="service-img">
                 <h2>Fortnite Accounts</h2>
-                <p>Get access to exclusive Fortnite accounts with rare skins and items.</p>
-                <p><strong>Price: $50+</strong></p>
-                <button>Buy Now</button>
+                <p>Get simple yet sweaty accounts for a low price + full access.</p>
+                <p><strong>Price: $10</strong></p>
+                <button onclick="window.location.href='https://discord.gg/ExgmZNT5cC'" class="buy-now-btn">View accounts</button>
             </div>
             <div class="service-box">
                 <img src="assets/img/pass.png" alt="Battle Pass Grinding" class="service-img">
                 <h2>Battle Pass Grinding</h2>
-                <p>Let us help you unlock the entire Battle Pass quickly and efficiently.</p>
-                <p><strong>Price: $25 per pass</strong></p>
-                <button>Order Now</button>
+                <p>Let us help you unlock the entire Battle Pass quickly and efficiently (to level 200).</p>
+                <p><strong>Price: $10</strong></p>
+                <button onclick="window.location.href='https://discord.gg/ExgmZNT5cC'" class="order-now-btn">Find a personnel</button>
             </div>
             <div class="service-box">
                 <img src="assets/img/RANKED.jpg" alt="Ranked Grinding" class="service-img">
                 <h2>Ranked Grinding</h2>
-                <p>Reach higher ranks in Fortnite without lifting a finger.</p>
-                <p><strong>Price: $40 per rank</strong></p>
-                <button>Level Up</button>
+                <p>Reach Unreal quickly and efficiently. (If not completed, you will be given a refund.)</p>
+                <p><strong>Price: $15</strong></p>
+                <button onclick="window.location.href='https://discord.gg/ExgmZNT5cC'" class="level-up-btn">Find a personnel</button>
             </div>
         </div>
+        <p class="disclaimer">
+            <strong>Disclaimer:</strong> All purchases are fully refundable in case we fail to deliver the promised results. Your satisfaction is guaranteed.
+        </p>
         <button onclick="window.location.href='index.html'" class="back-btn">Go Back</button>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS("particle-background", {
+                particles: {
+                    number: { value: 100 },
+                    color: { value: "#6200ea" },
+                    shape: { type: "circle" },
+                    size: { value: 3 },
+                    move: { enable: true, speed: 1 },
+                    line_linked: { enable: true, color: "#6200ea", distance: 150, width: 1 }
+                },
+                interactivity: {
+                    events: {
+                        onhover: { enable: true, mode: "grab" }
+                    }
+                }
+            });
+
+            console.log("Particles.js should be running now.");
+        });
+    </script>
 </body>
 </html>
